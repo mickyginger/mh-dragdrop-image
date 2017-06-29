@@ -18,7 +18,7 @@ angular
       restrict: 'E',
       replace: true,
       require: 'ngModel',
-      template: '<div class="drag-drop-img" ng-class="{ active: active }"><img ng-src="{{ ngModel }}"></div>',
+      template: '<div class="drag-drop-img" ng-class="{ active: active }"><img ng-src="{{ ngModel.$viewValue }}"></div>',
       link($scope, $element, attrs, ngModel) {
 
         $scope.active = false;
@@ -35,7 +35,7 @@ angular
           .on('dragover', function(e) {
             e.preventDefault();
           })
-          .on('drageleave', function() {
+          .on('dragleave', function() {
             $scope.active = false;
             $scope.$apply();
           })
