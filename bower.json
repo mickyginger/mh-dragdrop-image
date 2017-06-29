@@ -1,16 +1,16 @@
 {
-  "name": "ng-copy-text",
+  "name": "mh-dragdrop-image",
   "version": "0.0.1",
-  "main": "./dist/ng-copy-text.js",
-  "description": "HTML5 based Copy-to-Clipboard with AngularJS.",
-  "homepage": "https://github.com/codehangar/ng-copy-text",
+  "main": "./dist/mh-dragdrop-image.js",
+  "description": "An Angular 1.x directive to allow a user to drag and drop and image and convert it to a base64 data URL to be sent to an API",
+  "homepage": "https://github.com/mickyginger/mh-dragdrop-image",
   "private": false,
   "authors": [
-    "Ian Grail"
+    "Mike Hayden"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/codehangar/ng-copy-text.git"
+    "url": "git://github.com/mickyginger/mh-dragdrop-image.git"
   },
   "keywords": [
     "angular"

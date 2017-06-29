@@ -1,9 +1,9 @@
 {
-  "name": "ng-copy-text",
+  "name": "mh-dragdrop-image",
   "private": true,
   "version": "0.0.1",
-  "description": "HTML5 based Copy-to-Clipboard with AngularJS",
-  "repository": "https://github.com/codehangar/ng-copy-text",
+  "description": "An Angular 1.x directive to allow a user to drag and drop and image and convert it to a base64 data URL to be sent to an API",
+  "repository": "https://github.com/mickyginger/mh-dragdrop-image",
   "license": "MIT",
   "devDependencies": {
     "extend": "~2.0.0",
