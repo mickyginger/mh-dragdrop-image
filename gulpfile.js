@@ -1,7 +1,6 @@
 'use strict';
 
-var path = require('path'),
-  gulp = require('gulp'),
+var gulp = require('gulp'),
   extend = require('extend'),
   karma = require('karma').server,
   karmaConfig = require('./karma.conf'),

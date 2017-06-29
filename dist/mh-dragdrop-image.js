@@ -1,3 +1,12 @@
+/*!
+ * See LICENSE in this repository for license information
+ */
+(function(){
+'use strict';
+
+angular
+  .module('mhDragdropImage', []);
+
 'use strict';
 
 angular
@@ -40,3 +49,4 @@ angular
       }
     };
   }]);
+})();
