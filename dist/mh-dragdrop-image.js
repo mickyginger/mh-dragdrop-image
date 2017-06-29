@@ -16,11 +16,9 @@ angular
 
     return {
       restrict: 'E',
+      replace: true,
       require: 'ngModel',
       template: '<div class="drag-drop-img" ng-class="{ active: active }"><img ng-src="{{ ngModel }}"></div>',
-      scope: {
-        active: '='
-      },
       link($scope, $element, attrs, ngModel) {
 
         $scope.active = false;
