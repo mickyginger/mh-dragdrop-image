@@ -17,7 +17,7 @@ angular
       .drag-drop-img{background-size:cover;background-repeat:no-repeat;background-position:center;background-color:#ccc;height:250px;width:250px;text-align:center;position:relative}
       .drag-drop-img:before{content:'choose a file or drag it here';position:absolute;top:50%;left:50%;transform:translate(-50%, -60%);font-family:sans-serif;font-weight:bold;color:white;text-shadow:0 2px 2px rgba(0,0,0,0.6)}
       .drag-drop-img.active{opacity:0.5}
-      .drag-drop-img.active:before{display:none}
+      .drag-drop-img.has-image:before{display:none}
     </style>`);
 
     const fileReader = new $window.FileReader();
@@ -27,13 +27,14 @@ angular
       restrict: 'E',
       replace: true,
       require: 'ngModel',
-      template: '<div class="drag-drop-img" ng-class="{ active: active }"></div>',
+      template: '<div class="drag-drop-img" ng-class="{ active: active, hasImage: hasImage }"></div>',
       link($scope, $element, attrs, ngModel) {
 
         $scope.active = false;
 
         fileReader.onload = function() {
           $element[0].style.backgroundImage = `url(${this.result})`;
+          $scope.hasImage = true;
           ngModel.$setViewValue(this.result);
           $scope.$apply();
         };
