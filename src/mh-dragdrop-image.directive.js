@@ -27,7 +27,6 @@ angular
           $element[0].style.backgroundImage = `url(${this.result})`;
           $element[0].classList.add('has-image');
           ngModel.$setViewValue(this.result);
-          $scope.$apply();
         };
 
         $element
