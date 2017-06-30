@@ -9,13 +9,15 @@ angular
       restrict: 'E',
       replace: true,
       require: 'ngModel',
-      template: '<div class="drag-drop-img" ng-class="{ active: active }"><img ng-src="{{ ngModel.$viewValue }}"></div>',
+      template: '<div class="drag-drop-img" ng-class="{ active: active }"><img ng-src="{{ base64String }}"></div>',
       link($scope, $element, attrs, ngModel) {
 
         $scope.active = false;
 
         fileReader.onload = function() {
+          $scope.base64String = this.result;
           ngModel.$setViewValue(this.result);
+          $scope.$apply();
         };
 
         $element
