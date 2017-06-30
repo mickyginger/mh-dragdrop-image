@@ -27,7 +27,7 @@ angular
       restrict: 'E',
       replace: true,
       require: 'ngModel',
-      template: '<div class="drag-drop-img" ng-class="{ active: active, hasImage: hasImage }"></div>',
+      template: '<div class="drag-drop-img" ng-class="[active, hasImage]"></div>',
       link($scope, $element, attrs, ngModel) {
 
         $scope.active = false;
