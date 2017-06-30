@@ -9,7 +9,7 @@ angular
       restrict: 'E',
       replace: true,
       require: 'ngModel',
-      template: '<div class="drag-drop-img" ng-class="{ active: active }"><img ng-src="{{ base64String }}"></div>',
+      template: '<div class="drag-drop-img" ng-style="background-image: url({{ base64String }})" ng-class="{ active: active }"></div>',
       link($scope, $element, attrs, ngModel) {
 
         $scope.active = false;
@@ -34,6 +34,7 @@ angular
           })
           .on('drop', function(e) {
             e.preventDefault();
+            $scope.active = false;
             const file = (e.target.files || e.dataTransfer.files)[0];
             fileReader.readAsDataURL(file);
           });
