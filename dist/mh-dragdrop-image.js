@@ -34,7 +34,6 @@ angular
 
         fileReader.onload = function() {
           $element[0].style.backgroundImage = `url(${this.result})`;
-          $scope.active = true;
           ngModel.$setViewValue(this.result);
           $scope.$apply();
         };
