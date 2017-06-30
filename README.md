@@ -1,6 +1,8 @@
-# drag-drop-img
+# `drag-drop-img`
 
-### An Angular 1.x directive to allow a user to drag and drop and image and convert it to a base64 data URL to be sent to an API
+An Angular 1.x directive to allow a user to drag and drop and image and convert it to a base64 data URL to be sent to an API
+
+![drag-drop](https://user-images.githubusercontent.com/3531085/27737311-97aed882-5d9f-11e7-85de-0773527dbc02.gif)
 
 #### Installation
 
