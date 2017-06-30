@@ -1,6 +1,6 @@
 # `drag-drop-img`
 
-An Angular 1.x directive to allow a user to drag and drop and image and convert it to a base64 data URL to be sent to an API
+An Angular 1.x directive to allow a user to drag and drop an image and convert it to a base64 data URL to be sent to an API
 
 ![drag-drop](https://user-images.githubusercontent.com/3531085/27737311-97aed882-5d9f-11e7-85de-0773527dbc02.gif)
 
@@ -49,7 +49,7 @@ The directive ships with the following default styles:
   position: relative;
 }
 
-.drag-drop-img:before{
+.drag-drop-img:before {
   content: 'choose a file or drag it here';
   position: absolute;
   top: 50%;
@@ -61,11 +61,11 @@ The directive ships with the following default styles:
   text-shadow: 0 2px 2px rgba(0,0,0,0.6);
 }
 
-.drag-drop-img.active{
+.drag-drop-img.active {
   opacity: 0.5;
 }
 
-.drag-drop-img.has-image:before{
+.drag-drop-img.has-image:before {
   display:none;
 }
 ```
