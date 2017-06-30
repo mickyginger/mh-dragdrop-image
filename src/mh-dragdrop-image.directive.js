@@ -18,33 +18,33 @@ angular
       restrict: 'E',
       replace: true,
       require: 'ngModel',
-      template: '<div class="drag-drop-img" ng-class="[active, hasImage]"></div>',
+      template: '<div class="drag-drop-img"></div>',
       link($scope, $element, attrs, ngModel) {
 
         $scope.active = false;
 
         fileReader.onload = function() {
           $element[0].style.backgroundImage = `url(${this.result})`;
-          $scope.hasImage = true;
+          $element[0].classList.add('has-image');
           ngModel.$setViewValue(this.result);
           $scope.$apply();
         };
 
         $element
           .on('dragenter', function() {
-            $scope.active = true;
+            $element[0].classList.add('active');
             $scope.$apply();
           })
           .on('dragover', function(e) {
             e.preventDefault();
           })
           .on('dragleave', function() {
-            $scope.active = false;
+            $element[0].classList.remove('active');
             $scope.$apply();
           })
           .on('drop', function(e) {
             e.preventDefault();
-            $scope.active = false;
+            $element[0].classList.remove('active');
             const file = (e.target.files || e.dataTransfer.files)[0];
             fileReader.readAsDataURL(file);
           })
@@ -53,7 +53,7 @@ angular
           });
 
         $fileInput.on('change', (e) => {
-          $scope.active = false;
+          $element[0].classList.remove('active');
           const file = (e.target.files || e.dataTransfer.files)[0];
           fileReader.readAsDataURL(file);
         });
