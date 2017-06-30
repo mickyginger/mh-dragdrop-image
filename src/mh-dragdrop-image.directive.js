@@ -4,7 +4,38 @@ angular
   .module('mhDragdropImage')
   .directive('dragDropImg', ['$window', function ($window) {
 
-    angular.element(document.querySelector('head')).prepend('<link rel="stylesheet" href="/css/drag-drop-img.css">');
+    angular.element(document.querySelector('head')).prepend(`<style>
+      .drag-drop-img {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #ccc;
+        height: 250px;
+        width: 250px;
+        text-align: center;
+        position: relative;
+      }
+
+      .drag-drop-img:before {
+        content: 'choose a file or drag it here';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+        font-family: sans-serif;
+        font-weight: bold;
+        color: white;
+        text-shadow: 0 2px 2px rgba(0,0,0,0.6);
+      }
+
+      .drag-drop-img.active {
+        opacity: 0.5;
+      }
+
+      .drag-drop-img.active:before {
+        display: none;
+      }
+    </style>`);
 
     const fileReader = new $window.FileReader();
     const $fileInput = angular.element('<input type="file">');
