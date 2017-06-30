@@ -2,7 +2,7 @@
   "name": "mh-dragdrop-image",
   "version": "0.0.1",
   "main": "./dist/mh-dragdrop-image.js",
-  "description": "An Angular 1.x directive to allow a user to drag and drop and image and convert it to a base64 data URL to be sent to an API",
+  "description": "An Angular 1.x directive to allow a user to drag and drop an image and convert it to a base64 data URL to be sent to an API",
   "homepage": "https://github.com/mickyginger/mh-dragdrop-image",
   "private": false,
   "authors": [
@@ -17,8 +17,8 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "angular": "1.2.x",
-    "angular-mocks": "~1.2.x"
+    "angular": "1.6.4",
+    "angular-mocks": "^1.6.4"
   },
   "ignore": [
     "**/.*",

@@ -1,9 +1,6 @@
 'use strict';
 
 var gulp = require('gulp'),
-  extend = require('extend'),
-  karma = require('karma').server,
-  karmaConfig = require('./karma.conf'),
   config = require('./build.conf.js'),
   plugins = require('gulp-load-plugins')();
 
@@ -39,25 +36,6 @@ gulp.task('scripts', function () {
     .pipe(plugins.filesize())
     .on('error', plugins.util.log);
 
-});
-
-gulp.task('test', function () {
-
-  karmaConfig({
-    set: function (testConfig) {
-
-      extend(testConfig, {
-        singleRun: ciMode,
-        autoWatch: !ciMode,
-        browsers: ['PhantomJS']
-      });
-
-      karma.start(testConfig, function (exitCode) {
-        plugins.util.log('Karma has exited with ' + exitCode);
-        process.exit(exitCode);
-      });
-    }
-  });
 });
 
 gulp.task('watch', function () {

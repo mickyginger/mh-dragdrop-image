@@ -72,7 +72,15 @@ The directive ships with the following default styles:
 
 Modify these styles in your project's stylesheet to change the look and feel of the directive.
 
+#### Tests
+
+Run tests with:
+
+```
+npm  test
+```
+
 #### TODO
 
-- [ ] Add tests
+- [X] Add tests
 - [ ] Update gulp task
