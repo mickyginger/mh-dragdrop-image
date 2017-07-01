@@ -15,7 +15,7 @@ bower install --save mickyginger/mh-dragdrop-image
 Add the script in your project:
 
 ```html
-<script src="/path/to/bower_components/mh-dragdrop-image.js"></script>
+<script src="/path/to/bower_components/mh-dragdrop-image/dist/mh-dragdrop-image.js"></script>
 ```
 
 Include in your Angular dependencies:
@@ -72,15 +72,7 @@ The directive ships with the following default styles:
 
 Modify these styles in your project's stylesheet to change the look and feel of the directive.
 
-#### Tests
-
-Run tests with:
-
-```
-npm  test
-```
-
 #### TODO
 
-- [X] Add tests
+- [ ] Add tests
 - [ ] Update gulp task
