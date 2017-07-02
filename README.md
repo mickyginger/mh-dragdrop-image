@@ -74,5 +74,5 @@ Modify these styles in your project's stylesheet to change the look and feel of 
 
 #### TODO
 
-- [ ] Add tests
+- [X] Add tests
 - [ ] Update gulp task
