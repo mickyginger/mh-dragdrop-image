@@ -24,7 +24,7 @@ function uploadImage(dataURI) {
   // create the file in a tmp folder
   fs.writeFile(`tmp/${filename}`, image, (err) => {
     if(err) throw err;
-    console.log(`${filename} successfully uploaded!`);
+    console.log('File successfully uploaded!');
   });
 }
 
