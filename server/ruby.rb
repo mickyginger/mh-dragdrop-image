@@ -16,7 +16,7 @@ def upload_image(data_uri)
   raise "Invalid file" unless WHITELIST.contains parts[1]
 
   # decode the data
-  image = Base64.decode64 parts[3]
+  image = Base64.decode64 parts[2]
   # generate a reasonable file extension from the mime type
   ext = MIME::Types[parts[1]].first.preferred_extension
   # create the filename
