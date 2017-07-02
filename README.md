@@ -72,7 +72,16 @@ The directive ships with the following default styles:
 
 Modify these styles in your project's stylesheet to change the look and feel of the directive.
 
+#### Handling the image on the server side
+
+> **Note**: you will need to write some custom code to handle the image on the server-side
+
+I aim to add some example code for converting the string back to an image on the server-side, in Node, Ruby and Python.
+
+Essentially you need to deconstruct the dataURI into mime type, encoding type and raw data, then convert it back into a file and store it somewhere (most likely a tmp folder). I would also recommend generating a random unique file name for the file.
+
 #### TODO
 
 - [X] Add tests
 - [ ] Update gulp task
+- [ ] Add example code for the server side
