@@ -13,12 +13,12 @@ def upload_image(data_uri)
   parts = data_uri.match(/^data:(.*);base64,(.*)$/)
 
   # check that mime type is in whitelist
-  raise "Invalid file type" unless WHITELIST.contains parts[1]
+  raise "Invalid file type" unless WHITELIST.include? parts[1]
 
   # decode the data
   image = Base64.decode64 parts[2]
   # generate a reasonable file extension from the mime type
-  ext = MIME::Types[parts[1]].first.preferred_extension
+  ext = parts[1].sub('image/', '.')
   # create the filename
   filename = "#{SecureRandom.uuid}.#{ext}"
 
