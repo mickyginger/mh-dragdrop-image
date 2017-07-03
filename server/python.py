@@ -26,7 +26,7 @@ def uploadImage(dataURI):
     filename = uuid.uuid4() + ext
 
     # create the file in a tmp folder
-    file = open(filename, 'w')
+    file = open('tmp/' + filename, 'w')
     file.write(image)
     file.close()
 
