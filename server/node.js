@@ -18,7 +18,7 @@ function uploadImage(dataURI) {
   const image = new Buffer(rawData, encoding);
   // generate a reasonable file extension from the mime type
   const ext = mimeType.replace('image/', '.');
-  // create the name
+  // create the filename
   const filename = `${uuid.v4()}${ext}`;
 
   // create the file in a tmp folder

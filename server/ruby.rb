@@ -13,7 +13,7 @@ def upload_image(data_uri)
   parts = data_uri.match(/^data:(.*);base64,(.*)$/)
 
   # check that mime type is in whitelist
-  raise "Invalid file" unless WHITELIST.contains parts[1]
+  raise "Invalid file type" unless WHITELIST.contains parts[1]
 
   # decode the data
   image = Base64.decode64 parts[2]
