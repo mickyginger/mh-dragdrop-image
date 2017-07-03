@@ -74,7 +74,7 @@ Modify these styles in your project's stylesheet to change the look and feel of 
 
 #### Handling the image on the server side
 
-In the `/server` folder you will find example code for handing the `dataURI` on the server-side in the following languages:
+In the `/server` folder you will find example code for handling the `dataURI` on the server-side in the following languages:
 
 - [NodeJS](server/index.js)
 - [Ruby](server/main.rb)
