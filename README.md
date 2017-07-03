@@ -84,4 +84,4 @@ Essentially you need to deconstruct the dataURI into mime type, encoding type an
 
 - [X] Add tests
 - [ ] Update gulp task
-- [ ] Add example code for the server side
+- [X] Add example code for the server side
