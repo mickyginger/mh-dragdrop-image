@@ -78,7 +78,7 @@ In the `/server` folder you will find example code for handing the `dataURI` on 
 
 - [NodeJS](server/node.js)
 - [Ruby](server/ruby.rb)
-- [Python](python.py)
+- [Python](server/python.py)
 
 #### TODO
 
