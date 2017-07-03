@@ -76,9 +76,10 @@ Modify these styles in your project's stylesheet to change the look and feel of 
 
 In the `/server` folder you will find example code for handing the `dataURI` on the server-side in the following languages:
 
-- [NodeJS](server/node.js)
-- [Ruby](server/ruby.rb)
-- [Python](server/python.py)
+- [NodeJS](server/index.js)
+- [Ruby](server/main.rb)
+- [Python](server/main.py)
+- [PHP](server/index.php)
 
 #### TODO
 
