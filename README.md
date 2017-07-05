@@ -9,7 +9,7 @@ An Angular 1.x directive to allow a user to drag and drop an image and convert i
 Install using bower:
 
 ```bash
-bower install --save mickyginger/mh-dragdrop-image
+bower install --save mh-dragdrop-image
 ```
 
 Add the script in your project:
