@@ -18,6 +18,12 @@ Add the script in your project:
 <script src="/path/to/bower_components/mh-dragdrop-image/dist/mh-dragdrop-image.js"></script>
 ```
 
+OR:
+
+```html
+<script src="/path/to/bower_components/mh-dragdrop-image/dist/mh-dragdrop-image.min.js"></script>
+```
+
 Include in your Angular dependencies:
 
 ```js
@@ -84,5 +90,5 @@ In the `/server` folder you will find example code for handling the `dataURI` on
 #### TODO
 
 - [X] Add tests
-- [ ] Update gulp task
+- [X] Update gulp task
 - [X] Add example code for the server side
