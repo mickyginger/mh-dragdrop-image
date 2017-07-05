@@ -11,8 +11,8 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAXCAMAAABd273TAAAAXVBMVEX///
 It is comprised of 4 parts:
 
 - `data:` This indicates that it is raw data and should be handled as such
-- `image/png;` The mime type. This tells the browser how the data should be interpreted
-- `base64,` The encoding. The tells the browser how to decode the string of raw data
+- `image/png` The mime type. This tells the browser how the data should be interpreted
+- `base64` The encoding. The tells the browser how to decode the string of raw data
 - `iVBORw0KGgoAAAANSUhEUgAAACAAAAAXCAMAAABd273TAAAAXVBMVEX…` The actual image data.
 
 Essentially the server side code will split the dataURI into its constituent parts with a regular expression, decode the raw data and write it to a file with the correct mime type.
